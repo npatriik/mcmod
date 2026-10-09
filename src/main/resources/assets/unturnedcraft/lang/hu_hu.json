@@ -1,0 +1,17 @@
+{
+  "itemGroup.unturnedcraft": "UnturnedCraft",
+  "item.unturnedcraft.colt": "1911",
+  "item.unturnedcraft.colt_magazine": "1911 tár",
+  "tooltip.unturnedcraft.ammo": "Lőszer: %s/%s",
+  "tooltip.unturnedcraft.controls": "%s: lövés, %s: célzás, %s: újratöltés",
+  "message.unturnedcraft.no_magazine": "Nincs nálad ilyen: %s",
+  "message.unturnedcraft.empty": "Üres! Újratöltés: %s",
+  "key.category.unturnedcraft.main": "UnturnedCraft",
+  "key.unturnedcraft.reload": "Fegyver újratöltése",
+  "subtitles.unturnedcraft.item.colt.shoot": "1911 elsül",
+  "subtitles.unturnedcraft.item.colt.reload": "1911 újratöltése",
+  "subtitles.unturnedcraft.item.colt.empty": "Üres fegyver kattan",
+  "death.attack.bullet": "%1$s játékost lelőtte %2$s",
+  "death.attack.bullet.item": "%1$s játékost lelőtte %2$s ezzel: %3$s",
+  "death.attack.bullet.player": "%1$s játékost lelőtték, miközben %2$s ellen harcolt"
+}

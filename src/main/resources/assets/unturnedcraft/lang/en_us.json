@@ -1,0 +1,17 @@
+{
+  "itemGroup.unturnedcraft": "UnturnedCraft",
+  "item.unturnedcraft.colt": "1911",
+  "item.unturnedcraft.colt_magazine": "1911 Magazine",
+  "tooltip.unturnedcraft.ammo": "Ammo: %s/%s",
+  "tooltip.unturnedcraft.controls": "%s: fire, %s: aim, %s: reload",
+  "message.unturnedcraft.no_magazine": "You have no %s",
+  "message.unturnedcraft.empty": "Empty! Press %s to reload",
+  "key.category.unturnedcraft.main": "UnturnedCraft",
+  "key.unturnedcraft.reload": "Reload Gun",
+  "subtitles.unturnedcraft.item.colt.shoot": "1911 fires",
+  "subtitles.unturnedcraft.item.colt.reload": "1911 reloads",
+  "subtitles.unturnedcraft.item.colt.empty": "Empty gun clicks",
+  "death.attack.bullet": "%1$s was shot by %2$s",
+  "death.attack.bullet.item": "%1$s was shot by %2$s using %3$s",
+  "death.attack.bullet.player": "%1$s was shot whilst fighting %2$s"
+}

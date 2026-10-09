@@ -1,0 +1,14 @@
+{
+  "item.colt.shoot": {
+    "subtitle": "subtitles.unturnedcraft.item.colt.shoot",
+    "sounds": ["unturnedcraft:colt/shoot"]
+  },
+  "item.colt.reload": {
+    "subtitle": "subtitles.unturnedcraft.item.colt.reload",
+    "sounds": ["unturnedcraft:colt/reload"]
+  },
+  "item.colt.empty": {
+    "subtitle": "subtitles.unturnedcraft.item.colt.empty",
+    "sounds": ["unturnedcraft:colt/hammer"]
+  }
+}

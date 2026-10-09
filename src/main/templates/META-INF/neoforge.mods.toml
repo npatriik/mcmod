@@ -1,0 +1,29 @@
+# This file tells NeoForge that this jar is a mod, and what its name and version are.
+# The dollar-brace placeholders are filled in from gradle.properties during the build.
+# (Keep this file plain ASCII: it goes through Gradle's text templating.)
+
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+description='''
+Unturned-elemek a Minecraftban.
+'''
+
+# Which NeoForge version the mod needs
+[[dependencies.${mod_id}]]
+    modId="neoforge"
+    type="required"
+    versionRange="[${neo_version},)"
+    ordering="NONE"
+    side="BOTH"
+
+# Which Minecraft version the mod needs
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"

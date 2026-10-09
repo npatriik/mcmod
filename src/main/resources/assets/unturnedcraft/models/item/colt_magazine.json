@@ -1,0 +1,39 @@
+{
+  "loader": "neoforge:obj",
+  "model": "unturnedcraft:models/item/colt_magazine.obj",
+  "flip_v": true,
+  "emissive_ambient": false,
+  "automatic_culling": false,
+  "gui_light": "side",
+  "textures": {
+    "texture": "unturnedcraft:item/colt_magazine",
+    "particle": "#texture"
+  },
+  "display": {
+    "firstperson_righthand": {
+      "rotation": [0, 30, 0],
+      "translation": [-4.5, 4, -1],
+      "scale": [1, 1, 1]
+    },
+    "thirdperson_righthand": {
+      "rotation": [90, 0, 0],
+      "translation": [0, 1, 1],
+      "scale": [1, 1, 1]
+    },
+    "gui": {
+      "rotation": [20, -50, 0],
+      "translation": [0, 0, 0],
+      "scale": [3.2, 3.2, 3.2]
+    },
+    "ground": {
+      "rotation": [0, 0, 0],
+      "translation": [0, 1, 0],
+      "scale": [1, 1, 1]
+    },
+    "fixed": {
+      "rotation": [0, 90, 0],
+      "translation": [0, 0, 0],
+      "scale": [2.5, 2.5, 2.5]
+    }
+  }
+}
