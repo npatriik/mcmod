@@ -1,0 +1,22 @@
+{
+  "parent": "unturnedcraft:item/determinator",
+  "display": {
+    "firstperson_righthand": {
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "translation": [
+        -8.96,
+        5.59,
+        0.11
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  }
+}

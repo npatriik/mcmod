@@ -1,0 +1,22 @@
+{
+  "parent": "unturnedcraft:item/honeybadger",
+  "display": {
+    "firstperson_righthand": {
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "translation": [
+        -8.96,
+        4.75,
+        3.74
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  }
+}

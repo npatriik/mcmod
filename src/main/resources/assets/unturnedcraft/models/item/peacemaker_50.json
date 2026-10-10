@@ -1,0 +1,99 @@
+{
+  "loader": "neoforge:obj",
+  "model": "unturnedcraft:models/item/peacemaker_50.obj",
+  "flip_v": true,
+  "emissive_ambient": false,
+  "automatic_culling": false,
+  "gui_light": "side",
+  "textures": {
+    "item": "unturnedcraft:item/peacemaker_50",
+    "particle": "#item"
+  },
+  "display": {
+    "firstperson_righthand": {
+      "rotation": [
+        0.0,
+        30.0,
+        0.0
+      ],
+      "translation": [
+        -4.5,
+        4.0,
+        -1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        90.0,
+        0.0,
+        0.0
+      ],
+      "translation": [
+        0.0,
+        1.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "gui": {
+      "rotation": [
+        20.0,
+        -50.0,
+        0.0
+      ],
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        2.635,
+        2.635,
+        2.635
+      ]
+    },
+    "ground": {
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "translation": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0.0,
+        90.0,
+        0.0
+      ],
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.613,
+        1.613,
+        1.613
+      ]
+    }
+  }
+}

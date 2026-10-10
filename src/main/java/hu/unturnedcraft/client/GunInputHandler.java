@@ -10,6 +10,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.neoforged.neoforge.client.event.CalculatePlayerTurnEvent;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.client.event.ComputeFovModifierEvent;
 import net.neoforged.neoforge.client.event.InputEvent;
@@ -26,10 +27,7 @@ import net.neoforged.neoforge.common.util.Lazy;
  * megtörténjen), és helyben is lefuttatjuk ugyanazt (hogy a hang és a visszarúgás ne késsen).
  */
 public final class GunInputHandler {
-    /** Célzás közben ennyiszeresére szűkül a látószög (kisebb szám = erősebb nagyítás). Saját választás. */
-    private static final float AIM_FOV_MULTIPLIER = 0.8f;
-
-    /** Saját csoport a Beállítások > Irányítás > Billentyűk listában. */
+    /** Saját csoport a játék billentyűbeállításai között. */
     private static final KeyMapping.Category KEY_CATEGORY = new KeyMapping.Category(UnturnedCraft.id("main"));
 
     /**
@@ -73,21 +71,24 @@ public final class GunInputHandler {
 
         // --- Lövés ---
         // A consumeClick() annyiszor ad igazat, ahányszor a gombot az előző tick óta LENYOMTÁK. Ettől
-        // lesz a fegyver félautomata: egy lenyomás = egy lövés, akármeddig tartod utána a gombot.
+        // félautomata egy fegyver: egy lenyomás = egy lövés, akármeddig tartod utána a gombot.
         boolean clicked = false;
         while (minecraft.options.keyAttack.consumeClick()) {
             clicked = true;
         }
-        // Automata fegyvernél az is elég, ha a gomb éppen le van nyomva; a tempót a cooldown adja.
+        // Automata fegyvernél az is elég, ha a gomb éppen le van nyomva; a tempót a tűzgyorsaság adja.
         boolean triggerPulled = clicked || (gun.stats().automatic() && minecraft.options.keyAttack.isDown());
 
-        if (triggerPulled && !player.getCooldowns().isOnCooldown(held)) {
+        if (triggerPulled) {
+            // A szögeket még a lövés ELŐTT jegyezzük fel, mert a helyi lövés visszarúgása elmozdítja a kamerát.
             float pitch = player.getXRot();
             float yaw = player.getYRot();
-            // 1. Szólunk a szervernek: ő dönti el, van-e találat, és ő veszi le a töltényt.
-            ClientPacketDistributor.sendToServer(new FireGunPayload(pitch, yaw));
-            // 2. Helyben is lefuttatjuk: hang és visszarúgás azonnal, nem a szerver válaszára várva.
-            gun.fire(player.level(), player, held, pitch, yaw);
+            // 1. Helyben lefuttatjuk: hang és visszarúgás azonnal, nem a szerver válaszára várva.
+            //    Hamisat ad, ha a fegyver épp nem süthető el (pl. még nem telt le a két lövés közti idő).
+            if (gun.fire(player.level(), player, held, pitch, yaw)) {
+                // 2. Szólunk a szervernek: ő dönti el, van-e találat, és ő veszi le a töltényt.
+                ClientPacketDistributor.sendToServer(new FireGunPayload(pitch, yaw));
+            }
         }
 
         // --- Újratöltés ---
@@ -111,15 +112,40 @@ public final class GunInputHandler {
         }
     }
 
+    /** A fegyver, amivel a játékos éppen céloz, vagy null. */
+    private static GunItem aimedGun(Player player) {
+        if (player != null && player.isUsingItem() && player.getUseItem().getItem() instanceof GunItem gun) {
+            return gun;
+        }
+        return null;
+    }
+
     /**
      * Látószög (FOV) számítása: a játék itt kérdezi meg, kell-e módosítani (így zoomol pl. az íj
-     * felhúzáskor). Ha a játékos fegyverrel céloz, szűkítjük a látószöget. A váltást a játék magától
-     * simítja, ezért nem ugrik a kép.
+     * felhúzáskor). Ha a játékos fegyverrel céloz, szűkítjük a látószöget: sima irányzéknál kicsit,
+     * távcsőnél a nagyításának megfelelően. A váltást a játék magától simítja, ezért nem ugrik a kép.
      */
     static void onComputeFov(ComputeFovModifierEvent event) {
-        Player player = event.getPlayer();
-        if (player.isUsingItem() && player.getUseItem().getItem() instanceof GunItem) {
-            event.setNewFovModifier(event.getNewFovModifier() * AIM_FOV_MULTIPLIER);
+        GunItem gun = aimedGun(event.getPlayer());
+        if (gun != null) {
+            event.setNewFovModifier(event.getNewFovModifier() * gun.stats().aimFovMultiplier());
+        }
+    }
+
+    /**
+     * Egérérzékenység. Ha a kép kétszeresére nagyít, ugyanaz az egérmozdulat kétszer akkorát
+     * mozdítana a célponton, ezért célzás közben a nagyítás arányában lassítjuk az egeret.
+     *
+     * A játék az érzékenység csúszkájának értékéből (s) így számol sebességet: (0.6 * s + 0.2)^3.
+     * Ahhoz, hogy a SEBESSÉG legyen a kért arányú, a csúszka értékét ennek megfelelően kell
+     * visszaszámolni; ezt csinálja a képlet.
+     */
+    static void onCalculateTurn(CalculatePlayerTurnEvent event) {
+        GunItem gun = aimedGun(Minecraft.getInstance().player);
+        if (gun != null) {
+            double speedRoot = 0.6 * event.getMouseSensitivity() + 0.2;
+            double scaledRoot = speedRoot * Math.cbrt(gun.stats().aimFovMultiplier());
+            event.setMouseSensitivity((scaledRoot - 0.2) / 0.6);
         }
     }
 

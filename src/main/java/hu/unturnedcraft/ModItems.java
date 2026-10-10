@@ -1,27 +1,31 @@
 package hu.unturnedcraft;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.component.UseEffects;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-/** A mod tárgyai és a kreatív menü füle. */
+/**
+ * A mod tárgyai és a kreatív menü füle. A fegyverek és tárak nincsenek egyenként felsorolva:
+ * a {@link GunDefinitions} adatfájljából jönnek, és itt egy-egy ciklus regisztrálja őket.
+ */
 public final class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(UnturnedCraft.MODID);
     public static final DeferredRegister<CreativeModeTab> CREATIVE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, UnturnedCraft.MODID);
 
-    /** 1911 tár. Sima tárgy, nincs saját viselkedése: a fegyver "eszi meg" újratöltéskor. */
-    public static final DeferredItem<Item> COLT_MAGAZINE = ITEMS.registerSimpleItem("colt_magazine",
-            properties -> properties.stacksTo(16).rarity(Rarity.UNCOMMON));
+    /** Az összes tár, azonosító szerint (pl. "military_30"). */
+    public static final Map<String, DeferredItem<MagazineItem>> MAGAZINES = new LinkedHashMap<>();
+    /** Az összes fegyver, azonosító szerint (pl. "eaglefire"). */
+    public static final Map<String, DeferredItem<GunItem>> GUNS = new LinkedHashMap<>();
 
     /**
      * Mi történik a játékossal, amíg céloz (vagyis "használja" a fegyvert): nem tud sprintelni, a
@@ -31,23 +35,40 @@ public final class ModItems {
      */
     private static final UseEffects AIMING_EFFECTS = new UseEffects(false, false, 0.75f);
 
-    /** 1911 pisztoly. Új példány tele tárral jön létre (ezt állítja be az AMMO komponens). */
-    public static final DeferredItem<GunItem> COLT = ITEMS.registerItem("colt",
-            properties -> new GunItem(properties, GunStats.COLT, COLT_MAGAZINE,
-                    ModSounds.COLT_SHOOT, ModSounds.COLT_RELOAD, ModSounds.COLT_EMPTY),
-            properties -> properties.stacksTo(1).rarity(Rarity.UNCOMMON)
-                    .component(ModDataComponents.AMMO.get(), GunStats.COLT.magazineSize())
-                    .component(DataComponents.USE_EFFECTS, AIMING_EFFECTS));
+    static {
+        for (GunDefinitions.Magazine magazine : GunDefinitions.MAGAZINES.values()) {
+            MAGAZINES.put(magazine.id(), ITEMS.registerItem(magazine.id(),
+                    properties -> new MagazineItem(properties, magazine.stats()),
+                    properties -> properties.stacksTo(16).rarity(magazine.rarity())));
+        }
 
-    /** Saját fül a kreatív menüben, hogy könnyű legyen megtalálni a mod tárgyait. */
+        for (GunDefinitions.Gun gun : GunDefinitions.GUNS.values()) {
+            GunStats stats = gun.stats();
+            DeferredItem<MagazineItem> defaultMagazine = MAGAZINES.get(stats.defaultMagazine());
+            int defaultAmmo = GunDefinitions.MAGAZINES.get(stats.defaultMagazine()).stats().amount();
+            GUNS.put(gun.id(), ITEMS.registerItem(gun.id(),
+                    properties -> new GunItem(properties, stats, defaultMagazine, ModSounds.forGun(gun.id())),
+                    // Új példány az alap tárával, tele jön létre: ezt állítja be a két saját komponens.
+                    properties -> properties.stacksTo(1).rarity(gun.rarity())
+                            .component(ModDataComponents.AMMO.get(), defaultAmmo)
+                            .component(ModDataComponents.LOADED_MAGAZINE.get(), defaultMagazine.getId())
+                            .component(DataComponents.USE_EFFECTS, AIMING_EFFECTS)));
+        }
+
+        // A 0.2.0-ig az 1911 tárát "colt_magazine"-nek hívták. Az alias miatt a régi világokban
+        // lévő tárak nem vesznek el: a játék az új néven (colt_7) tölti be őket.
+        ITEMS.addAlias(UnturnedCraft.id("colt_magazine"), UnturnedCraft.id("colt_7"));
+    }
+
+    /** Saját fül a kreatív menüben: elöl a fegyverek, utánuk a tárak. */
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MAIN_TAB = CREATIVE_TABS.register("main",
             () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.unturnedcraft"))
                     .withTabsBefore(CreativeModeTabs.COMBAT)
-                    .icon(() -> new ItemStack(COLT.get()))
+                    .icon(() -> new ItemStack(GUNS.get("colt").get()))
                     .displayItems((parameters, output) -> {
-                        output.accept(COLT.get());
-                        output.accept(COLT_MAGAZINE.get());
+                        GUNS.values().forEach(gun -> output.accept(gun.get()));
+                        MAGAZINES.values().forEach(magazine -> output.accept(magazine.get()));
                     })
                     .build());
 

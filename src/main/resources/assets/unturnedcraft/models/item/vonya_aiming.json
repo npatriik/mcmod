@@ -1,0 +1,22 @@
+{
+  "parent": "unturnedcraft:item/vonya",
+  "display": {
+    "firstperson_righthand": {
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "translation": [
+        -8.79,
+        5.29,
+        8.62
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "loader": "neoforge:obj",
+  "model": "unturnedcraft:models/item/cobra.obj",
+  "flip_v": true,
+  "emissive_ambient": false,
+  "automatic_culling": false,
+  "gui_light": "side",
+  "textures": {
+    "gun": "unturnedcraft:item/cobra",
+    "magazine": "unturnedcraft:item/cobra_magazine",
+    "particle": "#gun"
+  },
+  "display": {
+    "firstperson_righthand": {
+      "rotation": [
+        0.0,
+        4.0,
+        0.0
+      ],
+      "translation": [
+        -4.51,
+        4.3,
+        -1.14
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        90.0,
+        0.0,
+        0.0
+      ],
+      "translation": [
+        0.0,
+        2.14,
+        0.8
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "gui": {
+      "rotation": [
+        90.0,
+        -45.0,
+        90.0
+      ],
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.51,
+        1.51,
+        1.51
+      ]
+    },
+    "ground": {
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "translation": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0.0,
+        90.0,
+        0.0
+      ],
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.6,
+        1.6,
+        1.6
+      ]
+    }
+  }
+}

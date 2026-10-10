@@ -1,14 +1,866 @@
 {
+  "item.ace.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:ace/shoot"
+    ]
+  },
+  "item.ace.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:ace/reload"
+    ]
+  },
+  "item.ace.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:ace/hammer"
+    ]
+  },
+  "item.augewehr.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:augewehr/shoot"
+    ]
+  },
+  "item.augewehr.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:augewehr/reload"
+    ]
+  },
+  "item.augewehr.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:augewehr/hammer"
+    ]
+  },
+  "item.avenger.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:avenger/shoot"
+    ]
+  },
+  "item.avenger.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:avenger/reload"
+    ]
+  },
+  "item.avenger.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:avenger/hammer"
+    ]
+  },
+  "item.bane.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:bane/shoot"
+    ]
+  },
+  "item.bane.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:bane/reload"
+    ]
+  },
+  "item.bane.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:bane/hammer"
+    ]
+  },
+  "item.bluntforce.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:bluntforce/shoot"
+    ]
+  },
+  "item.bluntforce.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:bluntforce/reload"
+    ]
+  },
+  "item.bluntforce.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:bluntforce/hammer"
+    ]
+  },
+  "item.bulldog.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:bulldog/shoot"
+    ]
+  },
+  "item.bulldog.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:bulldog/reload"
+    ]
+  },
+  "item.bulldog.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:bulldog/hammer"
+    ]
+  },
+  "item.card.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:card/shoot"
+    ]
+  },
+  "item.card.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:card/reload"
+    ]
+  },
+  "item.card.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:card/hammer"
+    ]
+  },
+  "item.cobra.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:cobra/shoot"
+    ]
+  },
+  "item.cobra.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:cobra/reload"
+    ]
+  },
+  "item.cobra.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:cobra/hammer"
+    ]
+  },
   "item.colt.shoot": {
-    "subtitle": "subtitles.unturnedcraft.item.colt.shoot",
-    "sounds": ["unturnedcraft:colt/shoot"]
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:colt/shoot"
+    ]
   },
   "item.colt.reload": {
-    "subtitle": "subtitles.unturnedcraft.item.colt.reload",
-    "sounds": ["unturnedcraft:colt/reload"]
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:colt/reload"
+    ]
   },
   "item.colt.empty": {
-    "subtitle": "subtitles.unturnedcraft.item.colt.empty",
-    "sounds": ["unturnedcraft:colt/hammer"]
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:colt/hammer"
+    ]
+  },
+  "item.desert_falcon.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:desert_falcon/shoot"
+    ]
+  },
+  "item.desert_falcon.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:desert_falcon/reload"
+    ]
+  },
+  "item.desert_falcon.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:desert_falcon/hammer"
+    ]
+  },
+  "item.determinator.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:determinator/shoot"
+    ]
+  },
+  "item.determinator.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:determinator/reload"
+    ]
+  },
+  "item.determinator.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:determinator/hammer"
+    ]
+  },
+  "item.dragonfang.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:dragonfang/shoot"
+    ]
+  },
+  "item.dragonfang.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:dragonfang/reload"
+    ]
+  },
+  "item.dragonfang.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:dragonfang/hammer"
+    ]
+  },
+  "item.eaglefire.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:eaglefire/shoot"
+    ]
+  },
+  "item.eaglefire.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:eaglefire/reload"
+    ]
+  },
+  "item.eaglefire.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:eaglefire/hammer"
+    ]
+  },
+  "item.ekho.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:ekho/shoot"
+    ]
+  },
+  "item.ekho.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:ekho/reload"
+    ]
+  },
+  "item.ekho.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:ekho/hammer"
+    ]
+  },
+  "item.empire.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:empire/shoot"
+    ]
+  },
+  "item.empire.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:empire/reload"
+    ]
+  },
+  "item.empire.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:empire/hammer"
+    ]
+  },
+  "item.fury.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:fury/shoot"
+    ]
+  },
+  "item.fury.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:fury/reload"
+    ]
+  },
+  "item.fury.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:colt/hammer"
+    ]
+  },
+  "item.fusilaut.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:fusilaut/shoot"
+    ]
+  },
+  "item.fusilaut.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:fusilaut/reload"
+    ]
+  },
+  "item.fusilaut.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:fusilaut/hammer"
+    ]
+  },
+  "item.grizzly.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:grizzly/shoot"
+    ]
+  },
+  "item.grizzly.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:grizzly/reload"
+    ]
+  },
+  "item.grizzly.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:grizzly/hammer"
+    ]
+  },
+  "item.hawkhound.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:hawkhound/shoot"
+    ]
+  },
+  "item.hawkhound.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:hawkhound/reload"
+    ]
+  },
+  "item.hawkhound.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:hawkhound/hammer"
+    ]
+  },
+  "item.heartbreaker.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:heartbreaker/shoot"
+    ]
+  },
+  "item.heartbreaker.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:heartbreaker/reload"
+    ]
+  },
+  "item.heartbreaker.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:heartbreaker/hammer"
+    ]
+  },
+  "item.honeybadger.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:honeybadger/shoot"
+    ]
+  },
+  "item.honeybadger.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:honeybadger/reload"
+    ]
+  },
+  "item.honeybadger.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:honeybadger/hammer"
+    ]
+  },
+  "item.kryzkarek.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:kryzkarek/shoot"
+    ]
+  },
+  "item.kryzkarek.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:kryzkarek/reload"
+    ]
+  },
+  "item.kryzkarek.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:kryzkarek/hammer"
+    ]
+  },
+  "item.luger.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:luger/shoot"
+    ]
+  },
+  "item.luger.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:luger/reload"
+    ]
+  },
+  "item.luger.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:luger/hammer"
+    ]
+  },
+  "item.maplestrike.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:maplestrike/shoot"
+    ]
+  },
+  "item.maplestrike.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:maplestrike/reload"
+    ]
+  },
+  "item.maplestrike.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:maplestrike/hammer"
+    ]
+  },
+  "item.masterkey.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:masterkey/shoot"
+    ]
+  },
+  "item.masterkey.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:masterkey/reload"
+    ]
+  },
+  "item.masterkey.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:colt/hammer"
+    ]
+  },
+  "item.matamorez.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:matamorez/shoot"
+    ]
+  },
+  "item.matamorez.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:matamorez/reload"
+    ]
+  },
+  "item.matamorez.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:matamorez/hammer"
+    ]
+  },
+  "item.mp40.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:mp40/shoot"
+    ]
+  },
+  "item.mp40.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:mp40/reload"
+    ]
+  },
+  "item.mp40.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:mp40/hammer"
+    ]
+  },
+  "item.nailgun.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:nailgun/shoot"
+    ]
+  },
+  "item.nailgun.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:nailgun/reload"
+    ]
+  },
+  "item.nailgun.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:colt/hammer"
+    ]
+  },
+  "item.nightraider.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:nightraider/shoot"
+    ]
+  },
+  "item.nightraider.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:nightraider/reload"
+    ]
+  },
+  "item.nightraider.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:nightraider/hammer"
+    ]
+  },
+  "item.nykorev.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:nykorev/shoot"
+    ]
+  },
+  "item.nykorev.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:nykorev/reload"
+    ]
+  },
+  "item.nykorev.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:nykorev/hammer"
+    ]
+  },
+  "item.peacemaker.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:peacemaker/shoot"
+    ]
+  },
+  "item.peacemaker.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:peacemaker/reload"
+    ]
+  },
+  "item.peacemaker.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:peacemaker/hammer"
+    ]
+  },
+  "item.quadbarrel.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:quadbarrel/shoot"
+    ]
+  },
+  "item.quadbarrel.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:quadbarrel/reload"
+    ]
+  },
+  "item.quadbarrel.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:colt/hammer"
+    ]
+  },
+  "item.rifle_birch.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:rifle_birch/shoot"
+    ]
+  },
+  "item.rifle_birch.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:rifle_birch/reload"
+    ]
+  },
+  "item.rifle_birch.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:rifle_birch/hammer"
+    ]
+  },
+  "item.rifle_maple.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:rifle_maple/shoot"
+    ]
+  },
+  "item.rifle_maple.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:rifle_maple/reload"
+    ]
+  },
+  "item.rifle_maple.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:rifle_maple/hammer"
+    ]
+  },
+  "item.rifle_pine.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:rifle_pine/shoot"
+    ]
+  },
+  "item.rifle_pine.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:rifle_pine/reload"
+    ]
+  },
+  "item.rifle_pine.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:rifle_pine/hammer"
+    ]
+  },
+  "item.sabertooth.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:sabertooth/shoot"
+    ]
+  },
+  "item.sabertooth.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:sabertooth/reload"
+    ]
+  },
+  "item.sabertooth.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:sabertooth/hammer"
+    ]
+  },
+  "item.sawed_off.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:sawed_off/shoot"
+    ]
+  },
+  "item.sawed_off.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:sawed_off/reload"
+    ]
+  },
+  "item.sawed_off.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:colt/hammer"
+    ]
+  },
+  "item.scalar.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:scalar/shoot"
+    ]
+  },
+  "item.scalar.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:scalar/reload"
+    ]
+  },
+  "item.scalar.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:scalar/hammer"
+    ]
+  },
+  "item.schofield.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:schofield/shoot"
+    ]
+  },
+  "item.schofield.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:schofield/reload"
+    ]
+  },
+  "item.schofield.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:schofield/hammer"
+    ]
+  },
+  "item.snayperskya.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:snayperskya/shoot"
+    ]
+  },
+  "item.snayperskya.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:snayperskya/reload"
+    ]
+  },
+  "item.snayperskya.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:snayperskya/hammer"
+    ]
+  },
+  "item.sportshot.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:sportshot/shoot"
+    ]
+  },
+  "item.sportshot.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:sportshot/reload"
+    ]
+  },
+  "item.sportshot.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:sportshot/hammer"
+    ]
+  },
+  "item.swissgewehr.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:swissgewehr/shoot"
+    ]
+  },
+  "item.swissgewehr.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:swissgewehr/reload"
+    ]
+  },
+  "item.swissgewehr.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:swissgewehr/hammer"
+    ]
+  },
+  "item.teklowvka.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:teklowvka/shoot"
+    ]
+  },
+  "item.teklowvka.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:teklowvka/reload"
+    ]
+  },
+  "item.teklowvka.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:teklowvka/hammer"
+    ]
+  },
+  "item.timberwolf.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:timberwolf/shoot"
+    ]
+  },
+  "item.timberwolf.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:timberwolf/reload"
+    ]
+  },
+  "item.timberwolf.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:timberwolf/hammer"
+    ]
+  },
+  "item.viper.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:viper/shoot"
+    ]
+  },
+  "item.viper.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:viper/reload"
+    ]
+  },
+  "item.viper.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:viper/hammer"
+    ]
+  },
+  "item.vonya.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:vonya/shoot"
+    ]
+  },
+  "item.vonya.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:vonya/reload"
+    ]
+  },
+  "item.vonya.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:vonya/hammer"
+    ]
+  },
+  "item.yuri.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:yuri/shoot"
+    ]
+  },
+  "item.yuri.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:yuri/reload"
+    ]
+  },
+  "item.yuri.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:yuri/hammer"
+    ]
+  },
+  "item.zubeknakov.shoot": {
+    "subtitle": "subtitles.unturnedcraft.gun.shoot",
+    "sounds": [
+      "unturnedcraft:zubeknakov/shoot"
+    ]
+  },
+  "item.zubeknakov.reload": {
+    "subtitle": "subtitles.unturnedcraft.gun.reload",
+    "sounds": [
+      "unturnedcraft:zubeknakov/reload"
+    ]
+  },
+  "item.zubeknakov.empty": {
+    "subtitle": "subtitles.unturnedcraft.gun.empty",
+    "sounds": [
+      "unturnedcraft:zubeknakov/hammer"
+    ]
   }
 }

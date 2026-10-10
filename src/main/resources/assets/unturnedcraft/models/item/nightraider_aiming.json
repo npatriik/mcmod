@@ -1,0 +1,22 @@
+{
+  "parent": "unturnedcraft:item/nightraider",
+  "display": {
+    "firstperson_righthand": {
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "translation": [
+        -9.36,
+        4.06,
+        4.21
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  }
+}

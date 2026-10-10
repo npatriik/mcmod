@@ -1,0 +1,99 @@
+{
+  "loader": "neoforge:obj",
+  "model": "unturnedcraft:models/item/quadbarrel.obj",
+  "flip_v": true,
+  "emissive_ambient": false,
+  "automatic_culling": false,
+  "gui_light": "side",
+  "textures": {
+    "gun": "unturnedcraft:item/quadbarrel",
+    "particle": "#gun"
+  },
+  "display": {
+    "firstperson_righthand": {
+      "rotation": [
+        0.0,
+        4.0,
+        0.0
+      ],
+      "translation": [
+        -4.5,
+        5.09,
+        -0.98
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        90.0,
+        0.0,
+        0.0
+      ],
+      "translation": [
+        0.0,
+        1.98,
+        1.59
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "gui": {
+      "rotation": [
+        90.0,
+        -45.0,
+        90.0
+      ],
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.816,
+        0.816,
+        0.816
+      ]
+    },
+    "ground": {
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "translation": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0.0,
+        90.0,
+        0.0
+      ],
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.728,
+        0.728,
+        0.728
+      ]
+    }
+  }
+}

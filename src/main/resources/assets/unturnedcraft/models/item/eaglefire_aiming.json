@@ -1,0 +1,22 @@
+{
+  "parent": "unturnedcraft:item/eaglefire",
+  "display": {
+    "firstperson_righthand": {
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "translation": [
+        -8.64,
+        4.88,
+        3.1
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  }
+}

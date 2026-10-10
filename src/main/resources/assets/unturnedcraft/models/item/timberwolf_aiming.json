@@ -1,0 +1,22 @@
+{
+  "parent": "unturnedcraft:item/timberwolf",
+  "display": {
+    "firstperson_righthand": {
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "translation": [
+        -7.85,
+        5.02,
+        2.92
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  }
+}

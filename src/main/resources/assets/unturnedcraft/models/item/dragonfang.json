@@ -1,0 +1,101 @@
+{
+  "loader": "neoforge:obj",
+  "model": "unturnedcraft:models/item/dragonfang.obj",
+  "flip_v": true,
+  "emissive_ambient": false,
+  "automatic_culling": false,
+  "gui_light": "side",
+  "textures": {
+    "gun": "unturnedcraft:item/dragonfang",
+    "magazine": "unturnedcraft:item/dragonfang_magazine",
+    "sight": "unturnedcraft:item/flat_323232",
+    "particle": "#gun"
+  },
+  "display": {
+    "firstperson_righthand": {
+      "rotation": [
+        0.0,
+        4.0,
+        0.0
+      ],
+      "translation": [
+        -4.58,
+        5.23,
+        -0.75
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        90.0,
+        0.0,
+        0.0
+      ],
+      "translation": [
+        -0.09,
+        1.76,
+        1.74
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "gui": {
+      "rotation": [
+        90.0,
+        -45.0,
+        90.0
+      ],
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.847,
+        0.847,
+        0.847
+      ]
+    },
+    "ground": {
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "translation": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0.0,
+        90.0,
+        0.0
+      ],
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.833,
+        0.833,
+        0.833
+      ]
+    }
+  }
+}

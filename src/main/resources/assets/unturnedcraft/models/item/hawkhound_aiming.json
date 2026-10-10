@@ -1,0 +1,22 @@
+{
+  "parent": "unturnedcraft:item/hawkhound",
+  "display": {
+    "firstperson_righthand": {
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "translation": [
+        -7.98,
+        5.11,
+        3.76
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "parent": "unturnedcraft:item/mp40",
+  "display": {
+    "firstperson_righthand": {
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "translation": [
+        -9.13,
+        5.05,
+        6.23
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  }
+}

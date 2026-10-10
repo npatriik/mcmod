@@ -1,0 +1,22 @@
+{
+  "parent": "unturnedcraft:item/snayperskya",
+  "display": {
+    "firstperson_righthand": {
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "translation": [
+        -8.79,
+        5.38,
+        2.21
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "parent": "unturnedcraft:item/schofield",
+  "display": {
+    "firstperson_righthand": {
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "translation": [
+        -8.03,
+        5.88,
+        4.14
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  }
+}

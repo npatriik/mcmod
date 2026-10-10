@@ -1,4 +1,10 @@
-newmtl colt
+newmtl gun
 Ka 0 0 0
 Kd 1 1 1
-map_Kd #texture
+map_Kd #gun
+
+newmtl magazine
+Ka 0 0 0
+Kd 1 1 1
+map_Kd #magazine
+

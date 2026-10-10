@@ -1,12 +1,17 @@
 package hu.unturnedcraft;
 
+import java.util.Collections;
+import java.util.Map;
+import java.util.WeakHashMap;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
@@ -43,6 +48,8 @@ import net.minecraft.world.phys.Vec3;
  *   <li>jobb klikk nyomva tartva: célzás ({@link #use})</li>
  *   <li>R: újratöltés ({@link #reload})</li>
  * </ul>
+ * Minden fegyver ugyanez az osztály; ami megkülönbözteti őket, az a {@link GunStats} (a számaik),
+ * a hangjaik és a modelljük.
  *
  * <h2>Kliens és szerver</h2>
  * A Minecraftban a játék két félből áll, egyjátékos módban is: a kliens (amit látsz és irányítasz)
@@ -60,25 +67,35 @@ import net.minecraft.world.phys.Vec3;
 public class GunItem extends Item {
     /** Ennyi ideig nem lehet újra próbálkozni, ha üres fegyverrel próbálsz lőni. */
     private static final int EMPTY_CLICK_COOLDOWN_TICKS = 10;
-    /** A tölténysáv színe a tárgy ikonja alatt (a tár textúrájának sárgaréz színe). */
+    /** A tölténysáv színe a tárgy ikonja alatt (a tárak töltényeinek sárgaréz színe). */
     private static final int AMMO_BAR_COLOR = 0xE7C402;
     /** "Végtelen" ideig lehet célozni: a Minecraft tárgyhasználatának kötelező megadni egy hosszt (itt 1 óra). */
     private static final int MAX_AIM_TICKS = 72000;
+    /**
+     * A szerver ennyi tickkel engedékenyebb a tűzgyorsaságnál, mint a kliens. A két oldal órája
+     * ugyanis nem jár tökéletesen együtt, és e nélkül egy gyors sorozatból a szerver időnként
+     * eldobna egy-egy lövést, amit a kliens már "elsütött".
+     */
+    private static final int SERVER_FIRE_RATE_TOLERANCE_TICKS = 1;
+
+    /**
+     * Melyik játékos mikor lőtt utoljára (a saját tick-számlálója szerint; a szerveren egy korán
+     * érkezett lövésnél az az időpont, amikor esedékes lett volna). A kliensoldali és a
+     * szerveroldali játékos két külön objektum, ezért a két oldal nem keveredik. WeakHashMap:
+     * ha a játékos objektuma megszűnik (kilép, újraéled), a bejegyzése magától eltűnik.
+     */
+    private static final Map<Player, Integer> LAST_SHOT_TICK = Collections.synchronizedMap(new WeakHashMap<>());
 
     private final GunStats stats;
-    private final Supplier<? extends Item> magazine;
-    private final Supplier<SoundEvent> shootSound;
-    private final Supplier<SoundEvent> reloadSound;
-    private final Supplier<SoundEvent> emptySound;
+    private final Supplier<MagazineItem> defaultMagazine;
+    private final ModSounds.GunSounds sounds;
 
-    public GunItem(Properties properties, GunStats stats, Supplier<? extends Item> magazine,
-            Supplier<SoundEvent> shootSound, Supplier<SoundEvent> reloadSound, Supplier<SoundEvent> emptySound) {
+    public GunItem(Properties properties, GunStats stats, Supplier<MagazineItem> defaultMagazine,
+            ModSounds.GunSounds sounds) {
         super(properties);
         this.stats = stats;
-        this.magazine = magazine;
-        this.shootSound = shootSound;
-        this.reloadSound = reloadSound;
-        this.emptySound = emptySound;
+        this.defaultMagazine = defaultMagazine;
+        this.sounds = sounds;
     }
 
     public GunStats stats() {
@@ -86,7 +103,7 @@ public class GunItem extends Item {
     }
 
     // ------------------------------------------------------------------------------------
-    // Töltények
+    // Töltények és tár
     // ------------------------------------------------------------------------------------
 
     public static int getAmmo(ItemStack gun) {
@@ -95,6 +112,24 @@ public class GunItem extends Item {
 
     public static void setAmmo(ItemStack gun, int ammo) {
         gun.set(ModDataComponents.AMMO.get(), Math.max(0, ammo));
+    }
+
+    /**
+     * A fegyverben lévő tár számai. Egy fegyverbe többféle tár is illhet (pl. 30-as tár és 100-as
+     * dobtár), ezért a fegyver megjegyzi, melyik van benne. Ha ez az adat hiányzik vagy már nem
+     * létező tárra mutat, az alap tárral számolunk.
+     */
+    public MagazineStats loadedMagazine(ItemStack gun) {
+        Identifier id = gun.get(ModDataComponents.LOADED_MAGAZINE.get());
+        if (id != null && BuiltInRegistries.ITEM.getValue(id) instanceof MagazineItem magazine) {
+            return magazine.stats();
+        }
+        return defaultMagazine.get().stats();
+    }
+
+    /** Hány töltény fér a fegyverbe a most benne lévő tárral. */
+    public int capacity(ItemStack gun) {
+        return loadedMagazine(gun).amount();
     }
 
     // ------------------------------------------------------------------------------------
@@ -143,40 +178,83 @@ public class GunItem extends Item {
      *
      * @param pitch a nézés függőleges szöge a kattintás pillanatában (fok)
      * @param yaw   a nézés vízszintes szöge a kattintás pillanatában (fok)
+     * @return igaz, ha történt valami (lövés vagy üres kattanás); hamis, ha a fegyver épp nem süthető el
      */
-    public void fire(Level level, Player player, ItemStack gun, float pitch, float yaw) {
-        // A "cooldown" a tűzgyorsaság és az újratöltés ideje: amíg tart, a fegyver nem süthető el.
-        // A szerver a saját cooldownját elküldi a kliensnek, ezért a kettő együtt jár.
+    public boolean fire(Level level, Player player, ItemStack gun, float pitch, float yaw) {
+        // A "cooldown" itt az újratöltés (és az üres kattanás) ideje: amíg tart, a fegyver nem
+        // süthető el. A szerver a saját cooldownját elküldi a kliensnek, és a hotbaron is látszik.
         if (player.getCooldowns().isOnCooldown(gun)) {
-            return;
+            return false;
         }
         // Kreatív módban nem fogy a töltény.
         boolean infiniteAmmo = player.hasInfiniteMaterials();
 
         if (getAmmo(gun) <= 0 && !infiniteAmmo) {
             // Üres: csak kattan egyet.
-            playSound(level, player, emptySound.get(), 1.0f, 1.0f);
+            playSound(level, player, sounds.empty().get(), 1.0f, 1.0f);
             player.getCooldowns().addCooldown(gun, EMPTY_CLICK_COOLDOWN_TICKS);
             if (!level.isClientSide()) {
                 // A keybind(...) a kliensen arra a gombra cserélődik, amire az újratöltés be van állítva.
                 player.sendOverlayMessage(Component.translatable("message.unturnedcraft.empty",
                         Component.keybind("key.unturnedcraft.reload")));
             }
-            return;
+            return true;
+        }
+
+        if (!fireRateAllows(level, player)) {
+            return false;
         }
 
         // A 4.0 hangerő kb. 64 blokkos hallótávolságot jelent.
-        playSound(level, player, shootSound.get(), 4.0f, 0.95f + level.getRandom().nextFloat() * 0.1f);
-        player.getCooldowns().addCooldown(gun, stats.fireCooldownTicks());
+        playSound(level, player, sounds.shoot().get(), 4.0f, 0.95f + level.getRandom().nextFloat() * 0.1f);
 
         if (level instanceof ServerLevel serverLevel) {
-            fireBullet(serverLevel, player, pitch, yaw);
+            // Egy lövés több sörétet is kilőhet; mindegyik külön vonal, saját szórással.
+            int pellets = loadedMagazine(gun).pellets();
+            for (int i = 0; i < pellets; i++) {
+                fireBullet(serverLevel, player, pitch, yaw);
+            }
+            // Füst a cső végénél.
+            Vec3 muzzle = player.getEyePosition()
+                    .add(Vec3.directionFromRotation(pitch, yaw).scale(0.8)).add(0.0, -0.15, 0.0);
+            serverLevel.sendParticles(ParticleTypes.SMOKE, muzzle.x, muzzle.y, muzzle.z, 2, 0.02, 0.02, 0.02, 0.01);
             if (!infiniteAmmo) {
                 setAmmo(gun, getAmmo(gun) - 1);
             }
         } else {
             applyRecoil(player);
         }
+        return true;
+    }
+
+    /**
+     * Tűzgyorsaság: eltelt-e elég idő a játékos előző lövése óta? Ha igen, a mostani lövést
+     * rögtön fel is jegyzi.
+     *
+     * Ehhez szándékosan nem a Minecraft "cooldown" rendszerét használjuk: az a hotbaron is
+     * megjelenik, és egy másodpercenként 10-20 lövést leadó fegyvernél folyamatosan villogna.
+     *
+     * A szerver egy kicsit engedékenyebb (lásd SERVER_FIRE_RATE_TOLERANCE_TICKS), de a korábban
+     * érkezett lövést úgy könyveli el, mintha a "rendes" idejében jött volna. Így egy-egy csomag
+     * érkezhet a vártnál hamarabb, a fegyver átlagos tűzgyorsaságát viszont egy átírt kliens sem
+     * tudja túllépni: ami most korábban jött, az a következő lövés várakozási idejéből hiányzik.
+     */
+    private boolean fireRateAllows(Level level, Player player) {
+        int now = player.tickCount;
+        int tolerance = level.isClientSide() ? 0 : SERVER_FIRE_RATE_TOLERANCE_TICKS;
+        Integer last = LAST_SHOT_TICK.get(player);
+        if (last == null || now < last - tolerance) {
+            // Még nem lőtt (vagy a számláló újraindult): nincs mihez viszonyítani.
+            LAST_SHOT_TICK.put(player, now);
+            return true;
+        }
+        int due = last + stats.fireCooldownTicks();
+        if (now < due - tolerance) {
+            return false;
+        }
+        // Korai lövésnél az esedékes időpontot jegyezzük fel, nem a tényleges érkezést.
+        LAST_SHOT_TICK.put(player, Math.max(now, due));
+        return true;
     }
 
     // ------------------------------------------------------------------------------------
@@ -185,7 +263,7 @@ public class GunItem extends Item {
 
     /** Egy újratöltési kísérlet. Mindkét oldalon lefut (lásd az osztály leírását). */
     public void reload(Level level, Player player, ItemStack gun) {
-        if (player.getCooldowns().isOnCooldown(gun) || getAmmo(gun) >= stats.magazineSize()) {
+        if (player.getCooldowns().isOnCooldown(gun) || getAmmo(gun) >= capacity(gun)) {
             return;
         }
         boolean infiniteAmmo = player.hasInfiniteMaterials();
@@ -193,29 +271,37 @@ public class GunItem extends Item {
 
         if (slot < 0 && !infiniteAmmo) {
             if (!level.isClientSide()) {
-                player.sendOverlayMessage(Component.translatable("message.unturnedcraft.no_magazine",
-                        Component.translatable(magazine.get().getDescriptionId())));
+                player.sendOverlayMessage(Component.translatable("message.unturnedcraft.no_magazine"));
             }
             return;
         }
 
         // Újratöltés közben nem lehet célozni, és amíg a cooldown tart, lőni sem.
         player.stopUsingItem();
-        playSound(level, player, reloadSound.get(), 1.0f, 1.0f);
+        playSound(level, player, sounds.reload().get(), 1.0f, 1.0f);
         player.getCooldowns().addCooldown(gun, stats.reloadTicks());
         if (!level.isClientSide()) {
-            if (!infiniteAmmo) {
-                player.getInventory().removeItem(slot, 1);
+            if (slot >= 0) {
+                // A talált tár kerül a fegyverbe: innentől az ő befogadóképessége és sörétszáma számít.
+                MagazineItem magazine = (MagazineItem) player.getInventory().getItem(slot).getItem();
+                gun.set(ModDataComponents.LOADED_MAGAZINE.get(), BuiltInRegistries.ITEM.getKey(magazine));
+                if (!infiniteAmmo) {
+                    player.getInventory().removeItem(slot, 1);
+                }
             }
-            setAmmo(gun, stats.magazineSize());
+            setAmmo(gun, capacity(gun));
         }
     }
 
-    /** Megkeresi az első olyan helyet a játékosnál, ahol ehhez a fegyverhez való tár van. -1, ha nincs. */
+    /**
+     * Megkeresi az első olyan helyet a játékosnál (a hotbartól kezdve), ahol ebbe a fegyverbe illő
+     * tár van. -1, ha nincs. Hogy mi illik bele, azt a kaliber dönti el.
+     */
     private int findMagazineSlot(Player player) {
         Inventory inventory = player.getInventory();
         for (int slot = 0; slot < inventory.getContainerSize(); slot++) {
-            if (inventory.getItem(slot).is(magazine.get())) {
+            if (inventory.getItem(slot).getItem() instanceof MagazineItem magazine
+                    && magazine.stats().fits(stats.calibers())) {
                 return slot;
             }
         }
@@ -254,10 +340,6 @@ public class GunItem extends Item {
                 shooter, from, to, new AABB(from, to).inflate(1.0),
                 target -> !target.isSpectator() && target.isPickable() && target.isAlive(),
                 from.distanceToSqr(to));
-
-        // Füst a cső végénél.
-        Vec3 muzzle = from.add(Vec3.directionFromRotation(pitch, yaw).scale(0.8)).add(0.0, -0.15, 0.0);
-        level.sendParticles(ParticleTypes.SMOKE, muzzle.x, muzzle.y, muzzle.z, 2, 0.02, 0.02, 0.02, 0.01);
 
         if (entityHit != null) {
             Entity target = entityHit.getEntity();
@@ -348,7 +430,8 @@ public class GunItem extends Item {
     @Override
     public int getBarWidth(ItemStack stack) {
         // A sáv teljes szélessége 13 képpont.
-        return Math.round(13f * Math.min(getAmmo(stack), stats.magazineSize()) / stats.magazineSize());
+        int capacity = Math.max(1, capacity(stack));
+        return Math.round(13f * Math.min(getAmmo(stack), capacity) / capacity);
     }
 
     @Override
@@ -362,8 +445,14 @@ public class GunItem extends Item {
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, TooltipDisplay display,
             Consumer<Component> tooltip, TooltipFlag flag) {
-        tooltip.accept(Component.translatable("tooltip.unturnedcraft.ammo", getAmmo(stack), stats.magazineSize())
+        tooltip.accept(Component.translatable("tooltip.unturnedcraft.ammo", getAmmo(stack), capacity(stack))
                 .withStyle(ChatFormatting.GRAY));
+        Identifier magazine = stack.get(ModDataComponents.LOADED_MAGAZINE.get());
+        if (magazine != null) {
+            tooltip.accept(Component.translatable("tooltip.unturnedcraft.magazine",
+                    Component.translatable(BuiltInRegistries.ITEM.getValue(magazine).getDescriptionId()))
+                    .withStyle(ChatFormatting.GRAY));
+        }
         // A keybind(...) mindig az éppen beállított gomb nevét írja ki, akkor is, ha átállítod.
         tooltip.accept(Component.translatable("tooltip.unturnedcraft.controls",
                 Component.keybind("key.attack"), Component.keybind("key.use"),

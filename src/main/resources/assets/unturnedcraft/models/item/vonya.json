@@ -1,0 +1,101 @@
+{
+  "loader": "neoforge:obj",
+  "model": "unturnedcraft:models/item/vonya.obj",
+  "flip_v": true,
+  "emissive_ambient": false,
+  "automatic_culling": false,
+  "gui_light": "side",
+  "textures": {
+    "gun": "unturnedcraft:item/vonya",
+    "magazine": "unturnedcraft:item/vonya_magazine",
+    "sight": "unturnedcraft:item/flat_3c3c3c",
+    "particle": "#gun"
+  },
+  "display": {
+    "firstperson_righthand": {
+      "rotation": [
+        0.0,
+        4.0,
+        0.0
+      ],
+      "translation": [
+        -4.3,
+        5.01,
+        -0.62
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        90.0,
+        0.0,
+        0.0
+      ],
+      "translation": [
+        0.17,
+        1.61,
+        1.52
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "gui": {
+      "rotation": [
+        90.0,
+        -45.0,
+        90.0
+      ],
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.902,
+        0.902,
+        0.902
+      ]
+    },
+    "ground": {
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "translation": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0.0,
+        90.0,
+        0.0
+      ],
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        0.855,
+        0.855,
+        0.855
+      ]
+    }
+  }
+}

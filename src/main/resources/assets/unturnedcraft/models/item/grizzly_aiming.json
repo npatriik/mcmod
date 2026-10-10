@@ -1,0 +1,22 @@
+{
+  "parent": "unturnedcraft:item/grizzly",
+  "display": {
+    "firstperson_righthand": {
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "translation": [
+        -9.54,
+        5.7,
+        -0.32
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  }
+}

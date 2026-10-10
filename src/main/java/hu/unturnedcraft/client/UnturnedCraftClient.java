@@ -25,5 +25,6 @@ public class UnturnedCraftClient {
         NeoForge.EVENT_BUS.addListener(GunInputHandler::onClientTick);
         NeoForge.EVENT_BUS.addListener(GunInputHandler::onInteractionKey);
         NeoForge.EVENT_BUS.addListener(GunInputHandler::onComputeFov);
+        NeoForge.EVENT_BUS.addListener(GunInputHandler::onCalculateTurn);
     }
 }

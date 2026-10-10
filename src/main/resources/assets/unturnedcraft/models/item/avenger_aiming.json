@@ -1,0 +1,22 @@
+{
+  "parent": "unturnedcraft:item/avenger",
+  "display": {
+    "firstperson_righthand": {
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "translation": [
+        -8.96,
+        5.5,
+        -0.57
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  }
+}

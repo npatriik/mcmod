@@ -1,0 +1,22 @@
+{
+  "parent": "unturnedcraft:item/ekho",
+  "display": {
+    "firstperson_righthand": {
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "translation": [
+        -9.71,
+        5.76,
+        3.28
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  }
+}

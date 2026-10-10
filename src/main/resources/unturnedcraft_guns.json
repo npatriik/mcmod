@@ -1,0 +1,2302 @@
+{
+  "_comment": "Generalt fajl (tools/extract_unturned_assets.py). Kezzel ne szerkeszd: a kovetkezo futtatas felulirja. Az ertekek az Unturned .dat fajljaibol jonnek.",
+  "magazines": [
+    {
+      "id": "ace_6",
+      "name": "Ace Clip",
+      "rarity": "Uncommon",
+      "calibers": [
+        6
+      ],
+      "amount": 6,
+      "pellets": 1
+    },
+    {
+      "id": "avenger_13",
+      "name": "Avenger Magazine",
+      "rarity": "Rare",
+      "calibers": [
+        23
+      ],
+      "amount": 13,
+      "pellets": 1
+    },
+    {
+      "id": "bane_21",
+      "name": "Devil's Bane Magazine",
+      "rarity": "Epic",
+      "calibers": [
+        42
+      ],
+      "amount": 21,
+      "pellets": 6
+    },
+    {
+      "id": "bulldog_45",
+      "name": "Bulldog Magazine",
+      "rarity": "Rare",
+      "calibers": [
+        34
+      ],
+      "amount": 45,
+      "pellets": 1
+    },
+    {
+      "id": "card_71",
+      "name": "Calling Card Magazine",
+      "rarity": "Rare",
+      "calibers": [
+        35
+      ],
+      "amount": 71,
+      "pellets": 1
+    },
+    {
+      "id": "cobra_20",
+      "name": "Cobra Magazine",
+      "rarity": "Rare",
+      "calibers": [
+        4
+      ],
+      "amount": 20,
+      "pellets": 1
+    },
+    {
+      "id": "cobra_40",
+      "name": "Cobra Box",
+      "rarity": "Epic",
+      "calibers": [
+        4
+      ],
+      "amount": 40,
+      "pellets": 1
+    },
+    {
+      "id": "colt_7",
+      "name": "1911 Magazine",
+      "rarity": "Uncommon",
+      "calibers": [
+        3
+      ],
+      "amount": 7,
+      "pellets": 1
+    },
+    {
+      "id": "desert_falcon_7",
+      "name": "Desert Falcon Magazine",
+      "rarity": "Epic",
+      "calibers": [
+        19
+      ],
+      "amount": 7,
+      "pellets": 1
+    },
+    {
+      "id": "dragonfang_150",
+      "name": "Dragonfang Box",
+      "rarity": "Epic",
+      "calibers": [
+        12
+      ],
+      "amount": 150,
+      "pellets": 3
+    },
+    {
+      "id": "ekho_7",
+      "name": "Ekho Magazine",
+      "rarity": "Legendary",
+      "calibers": [
+        36
+      ],
+      "amount": 7,
+      "pellets": 1
+    },
+    {
+      "id": "empire_28",
+      "name": "Empire Magazine",
+      "rarity": "Rare",
+      "calibers": [
+        41
+      ],
+      "amount": 27,
+      "pellets": 1
+    },
+    {
+      "id": "fury_250",
+      "name": "Hell's Fury Drum",
+      "rarity": "Legendary",
+      "calibers": [
+        32
+      ],
+      "amount": 250,
+      "pellets": 4
+    },
+    {
+      "id": "grizzly_5",
+      "name": "Grizzly Magazine",
+      "rarity": "Legendary",
+      "calibers": [
+        13
+      ],
+      "amount": 5,
+      "pellets": 1
+    },
+    {
+      "id": "hawkhound_8",
+      "name": "Hawkhound Magazine",
+      "rarity": "Uncommon",
+      "calibers": [
+        7
+      ],
+      "amount": 8,
+      "pellets": 1
+    },
+    {
+      "id": "kryzkarek_12",
+      "name": "Kryzkarek Magazine",
+      "rarity": "Uncommon",
+      "calibers": [
+        26
+      ],
+      "amount": 12,
+      "pellets": 1
+    },
+    {
+      "id": "luger_9",
+      "name": "Luger Magazine",
+      "rarity": "Uncommon",
+      "calibers": [
+        43
+      ],
+      "amount": 9,
+      "pellets": 1
+    },
+    {
+      "id": "mp40_32",
+      "name": "Maschinengewehr Magazine",
+      "rarity": "Epic",
+      "calibers": [
+        40
+      ],
+      "amount": 32,
+      "pellets": 1
+    },
+    {
+      "id": "matamorez_17",
+      "name": "Matamorez Magazine",
+      "rarity": "Epic",
+      "calibers": [
+        21
+      ],
+      "amount": 17,
+      "pellets": 1
+    },
+    {
+      "id": "matamorez_36",
+      "name": "Matamorez Box",
+      "rarity": "Legendary",
+      "calibers": [
+        21
+      ],
+      "amount": 36,
+      "pellets": 1
+    },
+    {
+      "id": "military_100",
+      "name": "Military Drum",
+      "rarity": "Epic",
+      "calibers": [
+        1
+      ],
+      "amount": 100,
+      "pellets": 1
+    },
+    {
+      "id": "military_30",
+      "name": "Military Magazine",
+      "rarity": "Rare",
+      "calibers": [
+        1
+      ],
+      "amount": 30,
+      "pellets": 1
+    },
+    {
+      "id": "military_tracer_20",
+      "name": "Military Tracer Magazine",
+      "rarity": "Epic",
+      "calibers": [
+        1
+      ],
+      "amount": 20,
+      "pellets": 1
+    },
+    {
+      "id": "nailgun_20",
+      "name": "Nailgun Magazine",
+      "rarity": "Uncommon",
+      "calibers": [
+        28
+      ],
+      "amount": 20,
+      "pellets": 1
+    },
+    {
+      "id": "nykorev_200",
+      "name": "Nykorev Box",
+      "rarity": "Epic",
+      "calibers": [
+        10
+      ],
+      "amount": 200,
+      "pellets": 3
+    },
+    {
+      "id": "peacemaker_50",
+      "name": "Peacemaker Magazine",
+      "rarity": "Rare",
+      "calibers": [
+        24
+      ],
+      "amount": 50,
+      "pellets": 1
+    },
+    {
+      "id": "ranger_35",
+      "name": "Ranger Magazine",
+      "rarity": "Rare",
+      "calibers": [
+        9
+      ],
+      "amount": 35,
+      "pellets": 1
+    },
+    {
+      "id": "ranger_75",
+      "name": "Ranger Drum",
+      "rarity": "Epic",
+      "calibers": [
+        9
+      ],
+      "amount": 75,
+      "pellets": 1
+    },
+    {
+      "id": "rifle_5",
+      "name": "Rifle Clip",
+      "rarity": "Common",
+      "calibers": [
+        17
+      ],
+      "amount": 5,
+      "pellets": 1
+    },
+    {
+      "id": "sabertooth_10",
+      "name": "Sabertooth Magazine",
+      "rarity": "Rare",
+      "calibers": [
+        22
+      ],
+      "amount": 10,
+      "pellets": 1
+    },
+    {
+      "id": "scalar_30",
+      "name": "Scalar Magazine",
+      "rarity": "Rare",
+      "calibers": [
+        39
+      ],
+      "amount": 30,
+      "pellets": 1
+    },
+    {
+      "id": "schofield_5",
+      "name": "Schofield Clip",
+      "rarity": "Uncommon",
+      "calibers": [
+        5
+      ],
+      "amount": 5,
+      "pellets": 1
+    },
+    {
+      "id": "shells_2",
+      "name": "20 Gauge Shells",
+      "rarity": "Uncommon",
+      "calibers": [
+        16
+      ],
+      "amount": 2,
+      "pellets": 8
+    },
+    {
+      "id": "shells_8",
+      "name": "12 Gauge Shells",
+      "rarity": "Rare",
+      "calibers": [
+        8
+      ],
+      "amount": 8,
+      "pellets": 6
+    },
+    {
+      "id": "snayperskya_7",
+      "name": "Snayperskya Magazine",
+      "rarity": "Rare",
+      "calibers": [
+        11
+      ],
+      "amount": 7,
+      "pellets": 1
+    },
+    {
+      "id": "sportshot_10",
+      "name": "Sportshot Magazine",
+      "rarity": "Uncommon",
+      "calibers": [
+        18
+      ],
+      "amount": 10,
+      "pellets": 1
+    },
+    {
+      "id": "swissgewehr_20",
+      "name": "Swissgewehr Magazine",
+      "rarity": "Rare",
+      "calibers": [
+        1
+      ],
+      "amount": 20,
+      "pellets": 1
+    },
+    {
+      "id": "teklowvka_15",
+      "name": "Teklowvka Magazine",
+      "rarity": "Rare",
+      "calibers": [
+        31
+      ],
+      "amount": 15,
+      "pellets": 1
+    },
+    {
+      "id": "timberwolf_6",
+      "name": "Timberwolf Magazine",
+      "rarity": "Legendary",
+      "calibers": [
+        2
+      ],
+      "amount": 6,
+      "pellets": 1
+    },
+    {
+      "id": "viper_25",
+      "name": "Viper Magazine",
+      "rarity": "Rare",
+      "calibers": [
+        25
+      ],
+      "amount": 25,
+      "pellets": 1
+    },
+    {
+      "id": "vonya_7",
+      "name": "Vonya Magazine",
+      "rarity": "Rare",
+      "calibers": [
+        33
+      ],
+      "amount": 7,
+      "pellets": 6
+    },
+    {
+      "id": "yuri_64",
+      "name": "Yuri Magazine",
+      "rarity": "Rare",
+      "calibers": [
+        27
+      ],
+      "amount": 64,
+      "pellets": 1
+    }
+  ],
+  "guns": [
+    {
+      "id": "ace",
+      "name": "Ace",
+      "rarity": "Uncommon",
+      "slot": "Secondary",
+      "action": "Trigger",
+      "calibers": [
+        6
+      ],
+      "defaultMagazine": "ace_6",
+      "range": 100.0,
+      "automatic": false,
+      "firerate": 10,
+      "reloadSeconds": 3.48,
+      "spreadAngleDegrees": 5.71,
+      "spreadAim": 0.05,
+      "aimInSeconds": 0.15,
+      "sightZoom": 0.0,
+      "recoilMinY": 15.0,
+      "recoilMaxY": 20.0,
+      "players": {
+        "damage": 50.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 99.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 50.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "augewehr",
+      "name": "Augewehr",
+      "rarity": "Epic",
+      "slot": "Primary",
+      "action": "Trigger",
+      "calibers": [
+        9,
+        1
+      ],
+      "defaultMagazine": "ranger_35",
+      "range": 200.0,
+      "automatic": true,
+      "firerate": 7,
+      "reloadSeconds": 1.272,
+      "spreadAngleDegrees": 8.53,
+      "spreadAim": 0.0375,
+      "aimInSeconds": 0.25,
+      "sightZoom": 4.0,
+      "recoilMinY": 1.5,
+      "recoilMaxY": 2.5,
+      "players": {
+        "damage": 43.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 99.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 43.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "avenger",
+      "name": "Avenger",
+      "rarity": "Rare",
+      "slot": "Secondary",
+      "action": "Trigger",
+      "calibers": [
+        23
+      ],
+      "defaultMagazine": "avenger_13",
+      "range": 100.0,
+      "automatic": false,
+      "firerate": 4,
+      "reloadSeconds": 1.416,
+      "spreadAngleDegrees": 8.53,
+      "spreadAim": 0.05,
+      "aimInSeconds": 0.2,
+      "sightZoom": 0.0,
+      "recoilMinY": 8.0,
+      "recoilMaxY": 11.0,
+      "players": {
+        "damage": 32.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 99.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 32.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "bane",
+      "name": "Devil's Bane",
+      "rarity": "Epic",
+      "slot": "Primary",
+      "action": "Trigger",
+      "calibers": [
+        42
+      ],
+      "defaultMagazine": "bane_21",
+      "range": 20.0,
+      "automatic": true,
+      "firerate": 10,
+      "reloadSeconds": 1.32,
+      "spreadAngleDegrees": 8.53,
+      "spreadAim": 0.75,
+      "aimInSeconds": 0.2,
+      "sightZoom": 0.0,
+      "recoilMinY": 2.0,
+      "recoilMaxY": 3.0,
+      "players": {
+        "damage": 30.0,
+        "leg": 0.7,
+        "spine": 0.8,
+        "skull": 1.2
+      },
+      "zombies": {
+        "damage": 30.0,
+        "leg": 0.7,
+        "spine": 0.8,
+        "skull": 1.2
+      },
+      "animals": {
+        "damage": 30.0,
+        "leg": 0.7,
+        "spine": 0.8,
+        "skull": 1.2
+      }
+    },
+    {
+      "id": "bluntforce",
+      "name": "Bluntforce",
+      "rarity": "Rare",
+      "slot": "Primary",
+      "action": "Pump",
+      "calibers": [
+        8
+      ],
+      "defaultMagazine": "shells_8",
+      "range": 35.0,
+      "automatic": false,
+      "firerate": 40,
+      "reloadSeconds": 2.088,
+      "spreadAngleDegrees": 5.71,
+      "spreadAim": 0.8,
+      "aimInSeconds": 0.2,
+      "sightZoom": 0.0,
+      "recoilMinY": 35.0,
+      "recoilMaxY": 40.0,
+      "players": {
+        "damage": 40.0,
+        "leg": 0.7,
+        "spine": 0.8,
+        "skull": 1.2
+      },
+      "zombies": {
+        "damage": 40.0,
+        "leg": 0.7,
+        "spine": 0.8,
+        "skull": 1.2
+      },
+      "animals": {
+        "damage": 40.0,
+        "leg": 0.7,
+        "spine": 0.8,
+        "skull": 1.2
+      }
+    },
+    {
+      "id": "bulldog",
+      "name": "Bulldog",
+      "rarity": "Rare",
+      "slot": "Secondary",
+      "action": "Trigger",
+      "calibers": [
+        34
+      ],
+      "defaultMagazine": "bulldog_45",
+      "range": 90.0,
+      "automatic": true,
+      "firerate": 2,
+      "reloadSeconds": 1.536,
+      "spreadAngleDegrees": 11.31,
+      "spreadAim": 0.25,
+      "aimInSeconds": 0.2,
+      "sightZoom": 0.0,
+      "recoilMinY": 2.0,
+      "recoilMaxY": 3.0,
+      "players": {
+        "damage": 20.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 75.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 20.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "card",
+      "name": "Calling Card",
+      "rarity": "Rare",
+      "slot": "Secondary",
+      "action": "Trigger",
+      "calibers": [
+        35
+      ],
+      "defaultMagazine": "card_71",
+      "range": 125.0,
+      "automatic": true,
+      "firerate": 4,
+      "reloadSeconds": 2.064,
+      "spreadAngleDegrees": 2.86,
+      "spreadAim": 0.5,
+      "aimInSeconds": 0.2,
+      "sightZoom": 0.0,
+      "recoilMinY": 0.5,
+      "recoilMaxY": 1.0,
+      "players": {
+        "damage": 33.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 99.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 33.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "cobra",
+      "name": "Cobra",
+      "rarity": "Rare",
+      "slot": "Secondary",
+      "action": "Trigger",
+      "calibers": [
+        4
+      ],
+      "defaultMagazine": "cobra_20",
+      "range": 80.0,
+      "automatic": true,
+      "firerate": 4,
+      "reloadSeconds": 1.56,
+      "spreadAngleDegrees": 16.7,
+      "spreadAim": 0.1,
+      "aimInSeconds": 0.15,
+      "sightZoom": 0.0,
+      "recoilMinY": 3.0,
+      "recoilMaxY": 4.5,
+      "players": {
+        "damage": 25.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 99.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 25.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "colt",
+      "name": "1911",
+      "rarity": "Uncommon",
+      "slot": "Secondary",
+      "action": "Trigger",
+      "calibers": [
+        3
+      ],
+      "defaultMagazine": "colt_7",
+      "range": 100.0,
+      "automatic": false,
+      "firerate": 4,
+      "reloadSeconds": 1.44,
+      "spreadAngleDegrees": 8.53,
+      "spreadAim": 0.05,
+      "aimInSeconds": 0.15,
+      "sightZoom": 0.0,
+      "recoilMinY": 10.0,
+      "recoilMaxY": 13.0,
+      "players": {
+        "damage": 24.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 99.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 24.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "desert_falcon",
+      "name": "Desert Falcon",
+      "rarity": "Epic",
+      "slot": "Secondary",
+      "action": "Trigger",
+      "calibers": [
+        19
+      ],
+      "defaultMagazine": "desert_falcon_7",
+      "range": 125.0,
+      "automatic": false,
+      "firerate": 10,
+      "reloadSeconds": 1.536,
+      "spreadAngleDegrees": 11.31,
+      "spreadAim": 0.05,
+      "aimInSeconds": 0.15,
+      "sightZoom": 0.0,
+      "recoilMinY": 15.0,
+      "recoilMaxY": 20.0,
+      "players": {
+        "damage": 80.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 125.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 99.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "determinator",
+      "name": "Determinator",
+      "rarity": "Uncommon",
+      "slot": "Secondary",
+      "action": "Trigger",
+      "calibers": [
+        8
+      ],
+      "defaultMagazine": "shells_8",
+      "range": 45.0,
+      "automatic": false,
+      "firerate": 4,
+      "reloadSeconds": 4.464,
+      "spreadAngleDegrees": 3.43,
+      "spreadAim": 0.6,
+      "aimInSeconds": 0.15,
+      "sightZoom": 0.0,
+      "recoilMinY": 55.0,
+      "recoilMaxY": 65.0,
+      "players": {
+        "damage": 17.0,
+        "leg": 0.725,
+        "spine": 1.0,
+        "skull": 1.0
+      },
+      "zombies": {
+        "damage": 25.0,
+        "leg": 0.725,
+        "spine": 1.0,
+        "skull": 1.0
+      },
+      "animals": {
+        "damage": 25.0,
+        "leg": 0.725,
+        "spine": 1.0,
+        "skull": 1.0
+      }
+    },
+    {
+      "id": "dragonfang",
+      "name": "Dragonfang",
+      "rarity": "Epic",
+      "slot": "Primary",
+      "action": "Trigger",
+      "calibers": [
+        12
+      ],
+      "defaultMagazine": "dragonfang_150",
+      "range": 175.0,
+      "automatic": true,
+      "firerate": 4,
+      "reloadSeconds": 2.616,
+      "spreadAngleDegrees": 11.31,
+      "spreadAim": 0.2,
+      "aimInSeconds": 0.25,
+      "sightZoom": 0.0,
+      "recoilMinY": 3.0,
+      "recoilMaxY": 4.0,
+      "players": {
+        "damage": 17.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 38.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 17.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "eaglefire",
+      "name": "Eaglefire",
+      "rarity": "Rare",
+      "slot": "Primary",
+      "action": "Trigger",
+      "calibers": [
+        1
+      ],
+      "defaultMagazine": "military_30",
+      "range": 200.0,
+      "automatic": false,
+      "firerate": 4,
+      "reloadSeconds": 1.44,
+      "spreadAngleDegrees": 5.71,
+      "spreadAim": 0.05,
+      "aimInSeconds": 0.25,
+      "sightZoom": 0.0,
+      "recoilMinY": 3.0,
+      "recoilMaxY": 4.0,
+      "players": {
+        "damage": 40.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 99.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 40.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "ekho",
+      "name": "Ekho",
+      "rarity": "Legendary",
+      "slot": "Primary",
+      "action": "Bolt",
+      "calibers": [
+        36
+      ],
+      "defaultMagazine": "ekho_7",
+      "range": 300.0,
+      "automatic": false,
+      "firerate": 50,
+      "reloadSeconds": 1.824,
+      "spreadAngleDegrees": 21.8,
+      "spreadAim": 0.001,
+      "aimInSeconds": 0.25,
+      "sightZoom": 0.0,
+      "recoilMinY": 30.0,
+      "recoilMaxY": 35.0,
+      "players": {
+        "damage": 99.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 125.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 99.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "empire",
+      "name": "Empire",
+      "rarity": "Rare",
+      "slot": "Secondary",
+      "action": "Trigger",
+      "calibers": [
+        41
+      ],
+      "defaultMagazine": "empire_28",
+      "range": 160.0,
+      "automatic": true,
+      "firerate": 5,
+      "reloadSeconds": 1.44,
+      "spreadAngleDegrees": 11.31,
+      "spreadAim": 0.04,
+      "aimInSeconds": 0.2,
+      "sightZoom": 0.0,
+      "recoilMinY": 2.0,
+      "recoilMaxY": 3.0,
+      "players": {
+        "damage": 30.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 99.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 30.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "fury",
+      "name": "Hell's Fury",
+      "rarity": "Legendary",
+      "slot": "Primary",
+      "action": "Minigun",
+      "calibers": [
+        32
+      ],
+      "defaultMagazine": "fury_250",
+      "range": 150.0,
+      "automatic": true,
+      "firerate": 3,
+      "reloadSeconds": 3.216,
+      "spreadAngleDegrees": 14.04,
+      "spreadAim": 0.175,
+      "aimInSeconds": 0.6,
+      "sightZoom": 0.0,
+      "recoilMinY": 0.3,
+      "recoilMaxY": 0.8,
+      "players": {
+        "damage": 9.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 25.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 9.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "fusilaut",
+      "name": "Fusilaut",
+      "rarity": "Epic",
+      "slot": "Primary",
+      "action": "Trigger",
+      "calibers": [
+        9,
+        1
+      ],
+      "defaultMagazine": "ranger_35",
+      "range": 200.0,
+      "automatic": false,
+      "firerate": 3,
+      "reloadSeconds": 1.272,
+      "spreadAngleDegrees": 8.53,
+      "spreadAim": 0.0375,
+      "aimInSeconds": 0.25,
+      "sightZoom": 0.0,
+      "recoilMinY": 2.75,
+      "recoilMaxY": 3.75,
+      "players": {
+        "damage": 43.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 99.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 43.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "grizzly",
+      "name": "Grizzly",
+      "rarity": "Legendary",
+      "slot": "Primary",
+      "action": "Trigger",
+      "calibers": [
+        13
+      ],
+      "defaultMagazine": "grizzly_5",
+      "range": 300.0,
+      "automatic": false,
+      "firerate": 20,
+      "reloadSeconds": 1.776,
+      "spreadAngleDegrees": 24.23,
+      "spreadAim": 0.001,
+      "aimInSeconds": 0.25,
+      "sightZoom": 0.0,
+      "recoilMinY": 35.0,
+      "recoilMaxY": 40.0,
+      "players": {
+        "damage": 99.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 150.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 99.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "hawkhound",
+      "name": "Hawkhound",
+      "rarity": "Uncommon",
+      "slot": "Primary",
+      "action": "Bolt",
+      "calibers": [
+        7
+      ],
+      "defaultMagazine": "hawkhound_8",
+      "range": 200.0,
+      "automatic": false,
+      "firerate": 50,
+      "reloadSeconds": 1.728,
+      "spreadAngleDegrees": 14.04,
+      "spreadAim": 0.01,
+      "aimInSeconds": 0.2,
+      "sightZoom": 0.0,
+      "recoilMinY": 15.0,
+      "recoilMaxY": 20.0,
+      "players": {
+        "damage": 80.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 99.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 99.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "heartbreaker",
+      "name": "Heartbreaker",
+      "rarity": "Epic",
+      "slot": "Primary",
+      "action": "Trigger",
+      "calibers": [
+        1
+      ],
+      "defaultMagazine": "military_30",
+      "range": 200.0,
+      "automatic": true,
+      "firerate": 7,
+      "reloadSeconds": 1.44,
+      "spreadAngleDegrees": 5.71,
+      "spreadAim": 0.05,
+      "aimInSeconds": 0.25,
+      "sightZoom": 0.0,
+      "recoilMinY": 4.0,
+      "recoilMaxY": 5.0,
+      "players": {
+        "damage": 40.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 99.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 40.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "honeybadger",
+      "name": "PDW",
+      "rarity": "Legendary",
+      "slot": "Secondary",
+      "action": "Trigger",
+      "calibers": [
+        1
+      ],
+      "defaultMagazine": "military_30",
+      "range": 125.0,
+      "automatic": true,
+      "firerate": 4,
+      "reloadSeconds": 1.44,
+      "spreadAngleDegrees": 9.93,
+      "spreadAim": 0.1,
+      "aimInSeconds": 0.25,
+      "sightZoom": 0.0,
+      "recoilMinY": 2.0,
+      "recoilMaxY": 4.0,
+      "players": {
+        "damage": 40.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 99.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 40.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "kryzkarek",
+      "name": "Kryzkarek",
+      "rarity": "Uncommon",
+      "slot": "Secondary",
+      "action": "Trigger",
+      "calibers": [
+        26
+      ],
+      "defaultMagazine": "kryzkarek_12",
+      "range": 90.0,
+      "automatic": false,
+      "firerate": 4,
+      "reloadSeconds": 1.44,
+      "spreadAngleDegrees": 8.53,
+      "spreadAim": 0.05,
+      "aimInSeconds": 0.15,
+      "sightZoom": 0.0,
+      "recoilMinY": 2.0,
+      "recoilMaxY": 3.0,
+      "players": {
+        "damage": 24.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 99.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 24.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "luger",
+      "name": "Luger",
+      "rarity": "Uncommon",
+      "slot": "Secondary",
+      "action": "Trigger",
+      "calibers": [
+        43
+      ],
+      "defaultMagazine": "luger_9",
+      "range": 90.0,
+      "automatic": false,
+      "firerate": 2,
+      "reloadSeconds": 1.44,
+      "spreadAngleDegrees": 11.31,
+      "spreadAim": 0.04,
+      "aimInSeconds": 0.15,
+      "sightZoom": 0.0,
+      "recoilMinY": 12.0,
+      "recoilMaxY": 15.0,
+      "players": {
+        "damage": 27.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 99.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 27.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "mp40",
+      "name": "Maschinengewehr",
+      "rarity": "Epic",
+      "slot": "Secondary",
+      "action": "Trigger",
+      "calibers": [
+        40
+      ],
+      "defaultMagazine": "mp40_32",
+      "range": 140.0,
+      "automatic": true,
+      "firerate": 6,
+      "reloadSeconds": 2.064,
+      "spreadAngleDegrees": 11.31,
+      "spreadAim": 0.04,
+      "aimInSeconds": 0.2,
+      "sightZoom": 0.0,
+      "recoilMinY": 2.0,
+      "recoilMaxY": 3.0,
+      "players": {
+        "damage": 30.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 99.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 30.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "maplestrike",
+      "name": "Maplestrike",
+      "rarity": "Epic",
+      "slot": "Primary",
+      "action": "Trigger",
+      "calibers": [
+        1
+      ],
+      "defaultMagazine": "military_30",
+      "range": 200.0,
+      "automatic": true,
+      "firerate": 5,
+      "reloadSeconds": 1.44,
+      "spreadAngleDegrees": 5.71,
+      "spreadAim": 0.05,
+      "aimInSeconds": 0.25,
+      "sightZoom": 0.0,
+      "recoilMinY": 4.0,
+      "recoilMaxY": 5.0,
+      "players": {
+        "damage": 40.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 99.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 40.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "masterkey",
+      "name": "Masterkey",
+      "rarity": "Uncommon",
+      "slot": "Primary",
+      "action": "Break",
+      "calibers": [
+        16
+      ],
+      "defaultMagazine": "shells_2",
+      "range": 30.0,
+      "automatic": false,
+      "firerate": 5,
+      "reloadSeconds": 1.56,
+      "spreadAngleDegrees": 8.53,
+      "spreadAim": 0.7,
+      "aimInSeconds": 0.2,
+      "sightZoom": 0.0,
+      "recoilMinY": 45.0,
+      "recoilMaxY": 50.0,
+      "players": {
+        "damage": 40.0,
+        "leg": 0.7,
+        "spine": 0.8,
+        "skull": 1.2
+      },
+      "zombies": {
+        "damage": 40.0,
+        "leg": 0.7,
+        "spine": 0.8,
+        "skull": 1.2
+      },
+      "animals": {
+        "damage": 40.0,
+        "leg": 0.7,
+        "spine": 0.8,
+        "skull": 1.2
+      }
+    },
+    {
+      "id": "matamorez",
+      "name": "Matamorez",
+      "rarity": "Legendary",
+      "slot": "Primary",
+      "action": "Trigger",
+      "calibers": [
+        21
+      ],
+      "defaultMagazine": "matamorez_17",
+      "range": 300.0,
+      "automatic": true,
+      "firerate": 8,
+      "reloadSeconds": 1.656,
+      "spreadAngleDegrees": 21.8,
+      "spreadAim": 0.005,
+      "aimInSeconds": 0.25,
+      "sightZoom": 0.0,
+      "recoilMinY": 5.0,
+      "recoilMaxY": 9.0,
+      "players": {
+        "damage": 70.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 99.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 70.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "nailgun",
+      "name": "Nailgun",
+      "rarity": "Uncommon",
+      "slot": "Secondary",
+      "action": "Trigger",
+      "calibers": [
+        28
+      ],
+      "defaultMagazine": "nailgun_20",
+      "range": 25.0,
+      "automatic": false,
+      "firerate": 3,
+      "reloadSeconds": 1.704,
+      "spreadAngleDegrees": 2.86,
+      "spreadAim": 0.5,
+      "aimInSeconds": 0.15,
+      "sightZoom": 0.0,
+      "recoilMinY": 2.0,
+      "recoilMaxY": 4.0,
+      "players": {
+        "damage": 19.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 23.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 31.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "nightraider",
+      "name": "Nightraider",
+      "rarity": "Epic",
+      "slot": "Primary",
+      "action": "Trigger",
+      "calibers": [
+        9,
+        1
+      ],
+      "defaultMagazine": "ranger_35",
+      "range": 200.0,
+      "automatic": true,
+      "firerate": 5,
+      "reloadSeconds": 1.272,
+      "spreadAngleDegrees": 8.53,
+      "spreadAim": 0.0375,
+      "aimInSeconds": 0.25,
+      "sightZoom": 0.0,
+      "recoilMinY": 2.0,
+      "recoilMaxY": 3.0,
+      "players": {
+        "damage": 43.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 99.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 43.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "nykorev",
+      "name": "Nykorev",
+      "rarity": "Epic",
+      "slot": "Primary",
+      "action": "Trigger",
+      "calibers": [
+        10
+      ],
+      "defaultMagazine": "nykorev_200",
+      "range": 150.0,
+      "automatic": true,
+      "firerate": 5,
+      "reloadSeconds": 2.616,
+      "spreadAngleDegrees": 8.53,
+      "spreadAim": 0.1,
+      "aimInSeconds": 0.25,
+      "sightZoom": 0.0,
+      "recoilMinY": 4.0,
+      "recoilMaxY": 6.0,
+      "players": {
+        "damage": 11.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 33.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 11.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "peacemaker",
+      "name": "Peacemaker",
+      "rarity": "Rare",
+      "slot": "Secondary",
+      "action": "Trigger",
+      "calibers": [
+        24
+      ],
+      "defaultMagazine": "peacemaker_50",
+      "range": 100.0,
+      "automatic": true,
+      "firerate": 3,
+      "reloadSeconds": 1.416,
+      "spreadAngleDegrees": 11.31,
+      "spreadAim": 0.1,
+      "aimInSeconds": 0.2,
+      "sightZoom": 0.0,
+      "recoilMinY": 1.5,
+      "recoilMaxY": 3.0,
+      "players": {
+        "damage": 20.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 75.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 20.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "quadbarrel",
+      "name": "Quadbarrel",
+      "rarity": "Epic",
+      "slot": "Secondary",
+      "action": "Break",
+      "calibers": [
+        8
+      ],
+      "defaultMagazine": "shells_8",
+      "range": 20.0,
+      "automatic": false,
+      "firerate": 5,
+      "reloadSeconds": 1.56,
+      "spreadAngleDegrees": 18.26,
+      "spreadAim": 0.7,
+      "aimInSeconds": 0.2,
+      "sightZoom": 0.0,
+      "recoilMinY": 47.0,
+      "recoilMaxY": 52.0,
+      "players": {
+        "damage": 43.0,
+        "leg": 0.7,
+        "spine": 0.8,
+        "skull": 1.2
+      },
+      "zombies": {
+        "damage": 43.0,
+        "leg": 0.7,
+        "spine": 0.8,
+        "skull": 1.2
+      },
+      "animals": {
+        "damage": 43.0,
+        "leg": 0.7,
+        "spine": 0.8,
+        "skull": 1.2
+      }
+    },
+    {
+      "id": "rifle_birch",
+      "name": "Birch Rifle",
+      "rarity": "Common",
+      "slot": "Primary",
+      "action": "Bolt",
+      "calibers": [
+        17
+      ],
+      "defaultMagazine": "rifle_5",
+      "range": 175.0,
+      "automatic": false,
+      "firerate": 50,
+      "reloadSeconds": 1.776,
+      "spreadAngleDegrees": 16.7,
+      "spreadAim": 0.01,
+      "aimInSeconds": 0.2,
+      "sightZoom": 0.0,
+      "recoilMinY": 15.0,
+      "recoilMaxY": 20.0,
+      "players": {
+        "damage": 80.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 99.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 99.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "rifle_maple",
+      "name": "Maple Rifle",
+      "rarity": "Common",
+      "slot": "Primary",
+      "action": "Bolt",
+      "calibers": [
+        17
+      ],
+      "defaultMagazine": "rifle_5",
+      "range": 200.0,
+      "automatic": false,
+      "firerate": 50,
+      "reloadSeconds": 1.776,
+      "spreadAngleDegrees": 16.7,
+      "spreadAim": 0.01,
+      "aimInSeconds": 0.2,
+      "sightZoom": 0.0,
+      "recoilMinY": 15.0,
+      "recoilMaxY": 20.0,
+      "players": {
+        "damage": 80.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 99.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 99.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "rifle_pine",
+      "name": "Pine Rifle",
+      "rarity": "Common",
+      "slot": "Primary",
+      "action": "Bolt",
+      "calibers": [
+        17
+      ],
+      "defaultMagazine": "rifle_5",
+      "range": 225.0,
+      "automatic": false,
+      "firerate": 50,
+      "reloadSeconds": 1.776,
+      "spreadAngleDegrees": 16.7,
+      "spreadAim": 0.01,
+      "aimInSeconds": 0.2,
+      "sightZoom": 0.0,
+      "recoilMinY": 15.0,
+      "recoilMaxY": 20.0,
+      "players": {
+        "damage": 80.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 99.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 99.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "sabertooth",
+      "name": "Sabertooth",
+      "rarity": "Rare",
+      "slot": "Primary",
+      "action": "Trigger",
+      "calibers": [
+        22
+      ],
+      "defaultMagazine": "sabertooth_10",
+      "range": 250.0,
+      "automatic": false,
+      "firerate": 10,
+      "reloadSeconds": 1.728,
+      "spreadAngleDegrees": 19.29,
+      "spreadAim": 0.005,
+      "aimInSeconds": 0.2,
+      "sightZoom": 0.0,
+      "recoilMinY": 7.0,
+      "recoilMaxY": 13.0,
+      "players": {
+        "damage": 60.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 99.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 60.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "sawed_off",
+      "name": "Sawed-Off",
+      "rarity": "Uncommon",
+      "slot": "Secondary",
+      "action": "Break",
+      "calibers": [
+        16
+      ],
+      "defaultMagazine": "shells_2",
+      "range": 20.0,
+      "automatic": false,
+      "firerate": 5,
+      "reloadSeconds": 1.56,
+      "spreadAngleDegrees": 18.26,
+      "spreadAim": 0.7,
+      "aimInSeconds": 0.2,
+      "sightZoom": 0.0,
+      "recoilMinY": 47.0,
+      "recoilMaxY": 52.0,
+      "players": {
+        "damage": 50.0,
+        "leg": 0.8,
+        "spine": 1.0,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 50.0,
+        "leg": 0.8,
+        "spine": 1.0,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 50.0,
+        "leg": 0.8,
+        "spine": 1.0,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "scalar",
+      "name": "Scalar",
+      "rarity": "Rare",
+      "slot": "Secondary",
+      "action": "Trigger",
+      "calibers": [
+        39
+      ],
+      "defaultMagazine": "scalar_30",
+      "range": 100.0,
+      "automatic": true,
+      "firerate": 3,
+      "reloadSeconds": 1.44,
+      "spreadAngleDegrees": 11.31,
+      "spreadAim": 0.1,
+      "aimInSeconds": 0.2,
+      "sightZoom": 0.0,
+      "recoilMinY": 1.0,
+      "recoilMaxY": 2.0,
+      "players": {
+        "damage": 30.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 99.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 30.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "schofield",
+      "name": "Schofield",
+      "rarity": "Uncommon",
+      "slot": "Primary",
+      "action": "Bolt",
+      "calibers": [
+        5
+      ],
+      "defaultMagazine": "schofield_5",
+      "range": 200.0,
+      "automatic": false,
+      "firerate": 50,
+      "reloadSeconds": 1.824,
+      "spreadAngleDegrees": 11.31,
+      "spreadAim": 0.01,
+      "aimInSeconds": 0.2,
+      "sightZoom": 0.0,
+      "recoilMinY": 20.0,
+      "recoilMaxY": 25.0,
+      "players": {
+        "damage": 80.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 99.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 99.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "snayperskya",
+      "name": "Snayperskya",
+      "rarity": "Rare",
+      "slot": "Primary",
+      "action": "Trigger",
+      "calibers": [
+        11
+      ],
+      "defaultMagazine": "snayperskya_7",
+      "range": 250.0,
+      "automatic": false,
+      "firerate": 13,
+      "reloadSeconds": 1.656,
+      "spreadAngleDegrees": 21.8,
+      "spreadAim": 0.005,
+      "aimInSeconds": 0.2,
+      "sightZoom": 0.0,
+      "recoilMinY": 10.0,
+      "recoilMaxY": 15.0,
+      "players": {
+        "damage": 65.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 99.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 65.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "sportshot",
+      "name": "Sportshot",
+      "rarity": "Uncommon",
+      "slot": "Primary",
+      "action": "Trigger",
+      "calibers": [
+        18
+      ],
+      "defaultMagazine": "sportshot_10",
+      "range": 200.0,
+      "automatic": false,
+      "firerate": 4,
+      "reloadSeconds": 1.584,
+      "spreadAngleDegrees": 5.71,
+      "spreadAim": 0.1,
+      "aimInSeconds": 0.2,
+      "sightZoom": 0.0,
+      "recoilMinY": 2.0,
+      "recoilMaxY": 3.0,
+      "players": {
+        "damage": 23.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 32.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 50.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "swissgewehr",
+      "name": "Swissgewehr",
+      "rarity": "Rare",
+      "slot": "Primary",
+      "action": "Trigger",
+      "calibers": [
+        1
+      ],
+      "defaultMagazine": "swissgewehr_20",
+      "range": 210.0,
+      "automatic": false,
+      "firerate": 5,
+      "reloadSeconds": 1.44,
+      "spreadAngleDegrees": 5.71,
+      "spreadAim": 0.05,
+      "aimInSeconds": 0.2,
+      "sightZoom": 0.0,
+      "recoilMinY": 4.0,
+      "recoilMaxY": 5.0,
+      "players": {
+        "damage": 40.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 99.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 40.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "teklowvka",
+      "name": "Teklowvka",
+      "rarity": "Rare",
+      "slot": "Secondary",
+      "action": "Trigger",
+      "calibers": [
+        31
+      ],
+      "defaultMagazine": "teklowvka_15",
+      "range": 80.0,
+      "automatic": false,
+      "firerate": 3,
+      "reloadSeconds": 1.536,
+      "spreadAngleDegrees": 11.31,
+      "spreadAim": 0.1,
+      "aimInSeconds": 0.15,
+      "sightZoom": 0.0,
+      "recoilMinY": 7.0,
+      "recoilMaxY": 9.0,
+      "players": {
+        "damage": 32.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 99.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 32.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "timberwolf",
+      "name": "Timberwolf",
+      "rarity": "Legendary",
+      "slot": "Primary",
+      "action": "Bolt",
+      "calibers": [
+        2
+      ],
+      "defaultMagazine": "timberwolf_6",
+      "range": 300.0,
+      "automatic": false,
+      "firerate": 50,
+      "reloadSeconds": 1.824,
+      "spreadAngleDegrees": 19.29,
+      "spreadAim": 0.001,
+      "aimInSeconds": 0.25,
+      "sightZoom": 0.0,
+      "recoilMinY": 25.0,
+      "recoilMaxY": 30.0,
+      "players": {
+        "damage": 99.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 125.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 99.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "viper",
+      "name": "Viper",
+      "rarity": "Rare",
+      "slot": "Secondary",
+      "action": "Trigger",
+      "calibers": [
+        25
+      ],
+      "defaultMagazine": "viper_25",
+      "range": 125.0,
+      "automatic": true,
+      "firerate": 4,
+      "reloadSeconds": 1.44,
+      "spreadAngleDegrees": 11.31,
+      "spreadAim": 0.1,
+      "aimInSeconds": 0.2,
+      "sightZoom": 0.0,
+      "recoilMinY": 2.0,
+      "recoilMaxY": 3.0,
+      "players": {
+        "damage": 24.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 99.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 24.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "vonya",
+      "name": "Vonya",
+      "rarity": "Rare",
+      "slot": "Primary",
+      "action": "Trigger",
+      "calibers": [
+        33
+      ],
+      "defaultMagazine": "vonya_7",
+      "range": 25.0,
+      "automatic": false,
+      "firerate": 20,
+      "reloadSeconds": 1.536,
+      "spreadAngleDegrees": 7.13,
+      "spreadAim": 0.775,
+      "aimInSeconds": 0.2,
+      "sightZoom": 0.0,
+      "recoilMinY": 25.0,
+      "recoilMaxY": 35.0,
+      "players": {
+        "damage": 35.0,
+        "leg": 0.7,
+        "spine": 0.8,
+        "skull": 1.2
+      },
+      "zombies": {
+        "damage": 35.0,
+        "leg": 0.7,
+        "spine": 0.8,
+        "skull": 1.2
+      },
+      "animals": {
+        "damage": 35.0,
+        "leg": 0.7,
+        "spine": 0.8,
+        "skull": 1.2
+      }
+    },
+    {
+      "id": "yuri",
+      "name": "Yuri",
+      "rarity": "Rare",
+      "slot": "Secondary",
+      "action": "Trigger",
+      "calibers": [
+        27
+      ],
+      "defaultMagazine": "yuri_64",
+      "range": 100.0,
+      "automatic": true,
+      "firerate": 3,
+      "reloadSeconds": 1.632,
+      "spreadAngleDegrees": 11.31,
+      "spreadAim": 0.1,
+      "aimInSeconds": 0.2,
+      "sightZoom": 0.0,
+      "recoilMinY": 2.5,
+      "recoilMaxY": 3.5,
+      "players": {
+        "damage": 22.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 80.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 22.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    },
+    {
+      "id": "zubeknakov",
+      "name": "Zubeknakov",
+      "rarity": "Epic",
+      "slot": "Primary",
+      "action": "Trigger",
+      "calibers": [
+        9
+      ],
+      "defaultMagazine": "ranger_35",
+      "range": 200.0,
+      "automatic": true,
+      "firerate": 4,
+      "reloadSeconds": 1.536,
+      "spreadAngleDegrees": 16.7,
+      "spreadAim": 0.033,
+      "aimInSeconds": 0.25,
+      "sightZoom": 0.0,
+      "recoilMinY": 2.5,
+      "recoilMaxY": 3.5,
+      "players": {
+        "damage": 37.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      },
+      "zombies": {
+        "damage": 99.0,
+        "leg": 0.3,
+        "spine": 0.6,
+        "skull": 1.1
+      },
+      "animals": {
+        "damage": 37.0,
+        "leg": 0.6,
+        "spine": 0.8,
+        "skull": 1.1
+      }
+    }
+  ]
+}

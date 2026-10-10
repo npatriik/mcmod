@@ -1,0 +1,22 @@
+{
+  "parent": "unturnedcraft:item/dragonfang",
+  "display": {
+    "firstperson_righthand": {
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "translation": [
+        -9.05,
+        5.2,
+        4.51
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  }
+}

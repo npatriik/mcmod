@@ -1,0 +1,22 @@
+{
+  "parent": "unturnedcraft:item/sabertooth",
+  "display": {
+    "firstperson_righthand": {
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "translation": [
+        -8.87,
+        5.64,
+        2.03
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  }
+}

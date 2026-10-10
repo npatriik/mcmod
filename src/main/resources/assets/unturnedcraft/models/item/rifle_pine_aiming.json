@@ -1,0 +1,22 @@
+{
+  "parent": "unturnedcraft:item/rifle_pine",
+  "display": {
+    "firstperson_righthand": {
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "translation": [
+        -8.41,
+        4.97,
+        3.78
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  }
+}
